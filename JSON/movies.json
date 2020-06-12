@@ -1,0 +1,38 @@
+var movie = `[
+    {
+    "name": "Red Line",
+    "description": "A gorgeous young automobile fanatic, and front to the hottest unsigned band on the West coast, finds herself caught up in illegal drag-racing competitions organized by exotic car fanatics.",
+    "img": "Redline.jpg",
+    "likes": "0"
+    },
+    {
+    "name": "Fast and the Furious: Tokyo Drift",
+		"description": "A teenager becomes a major competitor in the world of drift racing after moving in with his father in Tokyo to avoid a jail sentence in America.",
+		"img": "F&F.jpg",
+    "likes": "0"
+    },
+    {
+		"name": "Interstellar",
+		"description": "A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival.",
+		"img": "Interstellar.jpg",
+    "likes": "0"
+    },
+    {
+		"name": "Mr. & Mrs. Smith",
+		"description": "A bored married couple is surprised to learn that they are both assassins hired by competing agencies to kill each other.",
+		"img": "Smith.jpg",
+    "likes": "0"
+    },
+    {
+		"name": "6 Underground",
+		"description": "Meet a new kind of action hero. Six untraceable agents, totally off the grid. They've buried their pasts so they can change the future.",
+		"img": "6underground.jpg",
+    "likes": "0"
+    },
+    {
+		"name": "Casino Royale",
+		"description": "After earning 00 status and a licence to kill, Secret Agent James Bond sets out on his first mission as 007. Bond must defeat a private banker funding terrorists in a high-stakes game of poker at Casino Royale, Montenegro.",
+		"img": "casinoroyale.jpg",
+    "likes": "0"
+    }
+]`

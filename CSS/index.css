@@ -1,0 +1,272 @@
+* {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: white;
+}
+
+body {
+  background-color: darkgrey;
+}
+
+/*Header*/
+header {
+  background-color: #262626;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+}
+
+#logo {
+  padding: 11px;
+  margin: 0%;
+  max-width: 900px;
+  position: static;
+}
+
+#logo img {
+  width: 100%;
+}
+
+/*Navbar*/
+nav {
+  background-color: #BD1313;
+  display: block;
+  border: 1px solid black;
+}
+
+nav ul {
+  margin: 0%;
+  padding-left: 0%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+nav li {
+  list-style: none;
+  border-right: 1px solid black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+nav a {
+  color: black;
+  text-align: center;
+  padding: 11.5px 40px;
+  text-decoration: none;
+  color: black;
+  font-size: 1.3em;
+  text-transform: uppercase;
+}
+
+h1 {
+  text-align: center;
+  font-size: 6vw;
+  margin: 1%;
+  font-family: Future Forces;
+}
+
+#sort-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  font-size: 2vw;
+  margin: 0%;
+  width: 98%;
+}
+
+#sort-button p {
+  margin: 0;
+}
+
+li:hover {
+  background: white;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.1s ease-in-out;
+  -moz-transition: all 0.1s ease-in-out;
+  -ms-transition: all 0.1s ease-in-out;
+}
+
+/*Movies*/
+#movie {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#movie-box {
+  width: 45%;
+  background-color: black;
+  margin: 2%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-shadow: 0px 0px 1px 2px black;
+          box-shadow: 0px 0px 1px 2px black;
+  border-radius: 2px;
+}
+
+#movie-box .image-box {
+  width: 40%;
+}
+
+#movie-box img {
+  width: 100%;
+  padding: 0%;
+}
+
+#movie-box #text-box {
+  padding: 4%;
+  width: 60%;
+}
+
+#movie-box #text-box p {
+  color: white;
+  padding: 2%;
+  font-size: 1vw;
+}
+
+#movie-box #text-box h2 {
+  color: white;
+  padding: 2%;
+  font-size: 2vw;
+}
+
+#movie-box:hover {
+  -webkit-box-shadow: 0px 0px 10px 10px black;
+          box-shadow: 0px 0px 10px 10px black;
+}
+
+/*Like Button*/
+#like-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 10%;
+}
+
+#like-button {
+  width: 30%;
+  background-color: #BD1313;
+  border: 1px solid black;
+  font-size: 2vw;
+  margin-right: 5%;
+  border-radius: 10px;
+}
+
+#like-counter {
+  margin: 0%;
+  font-size: 2vw;
+}
+
+#like-button:hover {
+  -webkit-box-shadow: 0px 0px 10px 5px white;
+          box-shadow: 0px 0px 10px 5px white;
+}
+
+footer {
+  background-color: #262626;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+  text-align: center;
+}
+
+footer #logo {
+  padding: 5px;
+  margin: 0%;
+  max-width: 550px;
+  position: static;
+}
+
+footer img {
+  margin-top: 2%;
+  width: 20%;
+}
+
+footer p {
+  margin-top: 2px;
+  color: white;
+  font-size: 0.9em;
+}
+
+/*Media Queries*/
+@media screen and (max-width: 480px) {
+  header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  nav ul {
+    display: inline;
+  }
+  nav li {
+    background-color: #BD1313;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    border: 1px solid black;
+    margin-top: -1%;
+  }
+  #movie {
+    display: block;
+  }
+  #movie-box {
+    width: 100%;
+  }
+  #movie-box #text-box {
+    padding: 4%;
+    width: 60%;
+  }
+  #movie-box #text-box p {
+    font-size: 3vw;
+  }
+  #movie-box #text-box h2 {
+    font-size: 8vw;
+  }
+  .image-box {
+    width: 50%;
+  }
+  #text-box {
+    width: 50%;
+  }
+  #like-counter {
+    font-size: 6vw;
+  }
+  #like-button {
+    font-size: 5vw;
+  }
+  #like-button {
+    width: 40%;
+  }
+  h1 {
+    font-size: 10vw;
+  }
+}
+/*# sourceMappingURL=index.css.map */
