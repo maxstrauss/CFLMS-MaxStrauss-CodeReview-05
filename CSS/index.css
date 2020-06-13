@@ -70,7 +70,7 @@ h1 {
   font-family: Future Forces;
 }
 
-#sort-button {
+#sort-function {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -82,8 +82,18 @@ h1 {
   width: 98%;
 }
 
-#sort-button p {
-  margin: 0;
+#sort-function #sort-button {
+  background-color: #BD1313;
+  border: 1px solid black;
+  margin: 1%;
+  border-radius: 2px;
+  padding: 0%;
+}
+
+#sort-function a {
+  font-size: 1.5vw;
+  padding: 10px;
+  text-decoration: none;
 }
 
 li:hover {
@@ -122,7 +132,7 @@ li:hover {
   border-radius: 2px;
 }
 
-#movie-box .image-box {
+#movie-box #image-box {
   width: 40%;
 }
 
@@ -144,8 +154,15 @@ li:hover {
 
 #movie-box #text-box h2 {
   color: white;
-  padding: 2%;
+  padding: 1%;
   font-size: 2vw;
+  margin-bottom: 0%;
+}
+
+#movie-box #text-box h4 {
+  color: white;
+  padding-left: 2%;
+  font-size: 0.9vw;
 }
 
 #movie-box:hover {
@@ -161,18 +178,18 @@ li:hover {
   margin-top: 10%;
 }
 
-#like-button {
-  width: 30%;
+[id^="like-button"] {
   background-color: #BD1313;
+  width: 20%;
   border: 1px solid black;
-  font-size: 2vw;
+  font-size: 2.1vw;
   margin-right: 5%;
   border-radius: 10px;
 }
 
-#like-counter {
+[id^="like-counter"] {
   margin: 0%;
-  font-size: 2vw;
+  font-size: 2.1vw;
 }
 
 #like-button:hover {
@@ -250,23 +267,27 @@ footer p {
   #movie-box #text-box h2 {
     font-size: 8vw;
   }
-  .image-box {
+  #movie-box #text-box h4 {
+    font-size: 3vw;
+  }
+  #image-box {
     width: 50%;
   }
   #text-box {
     width: 50%;
   }
-  #like-counter {
+  [id^="like-counter"] {
     font-size: 6vw;
   }
-  #like-button {
+  [id^="like-button"] {
     font-size: 5vw;
-  }
-  #like-button {
     width: 40%;
   }
   h1 {
     font-size: 10vw;
+  }
+  #sort-function a {
+    font-size: 4.5vw;
   }
 }
 /*# sourceMappingURL=index.css.map */

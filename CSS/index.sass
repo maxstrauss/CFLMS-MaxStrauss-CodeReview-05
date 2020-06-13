@@ -51,21 +51,32 @@ h1
     margin: 1%
     font-family: Future Forces
 
-#sort-button
-    display: flex
-    justify-content: flex-end
-    font-size: 2vw
-    margin: 0%
-    width: 98%
-    p 
-        margin: 0
-
 li:hover
     background: white
     transition: all 0.5s ease-in-out
     -webkit-transition: all 0.1s ease-in-out
     -moz-transition: all 0.1s ease-in-out
     -ms-transition: all 0.1s ease-in-out
+
+
+/*Sort Button*/
+
+#sort-function
+    display: flex
+    justify-content: flex-end
+    font-size: 2vw
+    margin: 0%
+    width: 98%
+    #sort-button
+        background-color: #BD1313
+        border: 1px solid black
+        margin: 1%
+        border-radius: 2px
+        padding: 0%
+    a 
+        font-size: 1.5vw
+        padding: 10px
+        text-decoration: none
 
 /*Movies*/
 
@@ -83,7 +94,7 @@ li:hover
     box-shadow: 0px 0px 1px 2px black
     border-radius: 2px
 
-    .image-box
+    #image-box
         width: 40%
 		
     img 
@@ -99,8 +110,13 @@ li:hover
             font-size: 1vw
         h2
             color: white
-            padding: 2%
+            padding: 1%
             font-size: 2vw
+            margin-bottom: 0%
+        h4 
+            color: white
+            padding-left: 2%
+            font-size: 0.9vw
 
 #movie-box:hover
     box-shadow: 0px 0px 10px 10px black
@@ -111,17 +127,18 @@ li:hover
     display: flex
     margin-top: 10%
 
-#like-button
-    width: 30%
+[id^="like-button"] 
     background-color: #BD1313
+    width: 20%
     border: 1px solid black
-    font-size: 2vw
+    font-size: 2.1vw
     margin-right: 5%
     border-radius: 10px
 
-#like-counter
+
+[id^="like-counter"] 
     margin: 0%
-    font-size: 2vw
+    font-size: 2.1vw
 
 #like-button:hover
     box-shadow: 0px 0px 10px 5px white
@@ -177,21 +194,24 @@ footer
                 font-size: 3vw
             h2
                 font-size: 8vw
-
-    .image-box
+            h4 
+                font-size: 3vw
+    #image-box
         width: 50%
                     
     #text-box
         width: 50%
 
-    #like-counter
+    [id^="like-counter"] 
         font-size: 6vw
 
-    #like-button
+    [id^="like-button"]
         font-size: 5vw
-
-    #like-button
         width: 40%
 
     h1
         font-size: 10vw
+
+    #sort-function
+        a
+            font-size: 4.5vw

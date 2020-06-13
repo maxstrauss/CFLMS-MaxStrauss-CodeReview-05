@@ -1,102 +1,47 @@
-var movie = JSON.parse(movie)
+var movie = JSON.parse(movies);
 
-//Javascript:
-// for (i = 0; i < movie.length; i++) {
-//     document.getElementById("movie").innerHTML += "<div id='movie-box'><div class='image-box'><img src='IMG/" +
-//         movie[i].img + "'></div><div id ='text-box'><h2><b>" + movie[i].name + "</b></h2><p>" + movie[i].description + "</p><div id='like-box'><input type='Button' id='like-button' value='Like'></input><h3 id='like-counter'>0</h3></div></div></div>";
-// }
 
-//Loop to get the JSON data into the HTML. 
 $(document).ready(function () {
-    for (i = 0; i < movie.length; i++) {
-        $("#movie").append("<div id='movie-box'><div class='image-box'><img src='IMG/" + movie[i].img +
-            "'></div><div id ='text-box'><h2><b>" + movie[i].name +
-            "</b></h2><p>" + movie[i].description +
-            "</p><div id='like-box'><input type='Button' id='like-button' value='Like'></input><h3 id='like-counter'>" + movie[i].likes +
-            "</h3></div></div></div>");
+    for (let i = 0; i < movie.length; i++) {
+        displaymovies(movie[i], i)
+    };
 
-        $("#like-button").on("click", function () {
-            $("#like-counter").append(movie[i].likes)
+    // Movies //
 
+    function displaymovies(movie, i) {
+        $("#movie").append(`
+            <div id='movie-box'>
+                <div id='image-box'><img src=${movie.img}></div>
+                <div id ='text-box'><h2><b>${movie.name}</b></h2><h4>${movie.genre}</h4><p>${movie.description}</p><div>
+                <div id="like-box">
+                    <button id="like-button${i}">🖒</button>
+                    <h3 id="like-counter${i}">Likes : ${movie.likes}</h3>
+                </div>
+            </div>`);
+
+    // Like Button //
+
+        $(`#like-button${i}`).on("click", function () {
+            movie.likes++;
+            $(`#like-counter${i}`).text(`Likes : ${movie.likes}`);
         });
-
-
-
     }
 
+    // Sort by Likes //
 
+    $("#sort").on("click", function () {
+        let sorted = movie.slice(0);
+        $("#movie").text("");
+        sorted.sort(sortLikes);
+        for (let i = 0; i < sorted.length; i++) {
+            displaymovies(sorted[i], i)
+        }
+    });
 
-
-
-
-
-
+    function sortLikes(a, b) {
+        if (a.likes < b.likes) return 1;
+        else if (a.likes > b.likes) return -1;
+        else return 0;
+    };
 
 });
-
-
-
-
-
-
-
-// $("#like-button").on('click', function () {
-//     $("like-counter").append("hello")
-
-// });
-
-// var count = 0;
-
-// $("#like-button").click(function () {
-//     count++;
-//     $("like-counter").html("My current count is: " + count);
-// });
-
-
-
-
-
-
-
-
-
-
-// for (let j = 0; j < movie.length; j++) {
-
-//     $(".like-btn:eq(" + j + ")").click(function () {
-//         $(".likeAmount:eq(" + j + ")").text(MovieFactory[j].Likes + 1);
-//         $("#logo-img" + j + "").html("<i id='logo-img' class='fas fa-thumbs-up'></i>");
-//     });
-
-
-
-
-
-
-
-
-
-
-
-// };
-
-
-// for (i = 0; i < movie.length; i++) {
-
-//     $("#like-button").on("click", function () {
-//         $("#like-counter").text(movie[i].likes + 1);
-
-//     })
-
-//     console.log(movie[i].likes)
-// }
-
-
-
-
-// for(let j=0; j<movie.length; j++) {
-
-// 	$("#like-button:eq("+j+")").click(function(){
-// 		$("#like-counter:eq("+j+")").text(MovieFactory[j].Likes+1);
-//     $("#logo-img"+j+"").html("<i id='logo-img' class='fas fa-thumbs-up'></i>");
-// 	
